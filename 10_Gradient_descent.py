@@ -21,14 +21,14 @@ def d_f(x):
 def f(x):
     return((math.sin(x))/(1+x**2))
 def d_f(x):
-    return(3*x**2-4*x**3-2*x)
+    return((math.cos(x)+(x**2)*math.cos(x)-2*x*math.sin(x))/(1+2*x**2+x**4))
 
 
 def gradient_descent(alfa=0.1, starting_point=1, iterations=100):
     x = starting_point
     for step in range(iterations):
         x = x - alfa* d_f(x)
-        print(x)
+        #print(x)
     return(x)
 
 def random_generator(inf=-10,sup=10):
